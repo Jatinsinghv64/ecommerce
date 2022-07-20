@@ -1,0 +1,57 @@
+{% extends 'homepage/base.html' %}
+{% load static %}
+{% block navbar %}
+<nav class="navbar navbar-expand-sm navbar-light" style="background-color: #076ae0;">
+    <div class="container">
+        <a class="navbar-brand" href="{% url 'ecom-home' %}">
+            <img src="{% static 'homepage/images/banner/Shopee1.png' %}" alt="image" width="120" height="120">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active text-white" aria-current="page" href="{% url 'ecom-home' %}">Home</a>
+                </li>
+
+            </ul>
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="Search">
+                <div class="input-group-append">
+                    <button class="btn btn-warning" type="button">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </div>
+            </div>
+            <div>
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item dropdown mx-2">
+                        <a class="nav-link dropdown-toggle text-white" href="#" id="profileDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Hamza
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="profileDropdown">
+                            <li><a class="dropdown-item" href="{% url 'profile-page' %}">My Profile</a></li>
+                            <li><a class="dropdown-item" href="{% url 'order-page' %}">My Orders</a></li>
+                            <!-- <li><a class="dropdown-item" href="#">Change Password</a></li> -->
+                            <li><a class="dropdown-item" href="#">Logout</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a href="{% url 'cart-page' %}" class="cart position-relative d-inline-flex"
+                            aria-label="View your shopping cart">
+                            <i class="fas fa fa-shopping-cart fa-lg"></i>
+                            <span class="cart-basket d-flex align-items-center justify-content-center">
+                                4
+                            </span>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+{% endblock navbar %}

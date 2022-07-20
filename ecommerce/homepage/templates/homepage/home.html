@@ -1,0 +1,107 @@
+{% extends 'homepage/navbar.html' %}
+{% load static %}
+{% block title %}Home{% endblock title %}
+
+{% block banner_slider %}
+
+<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="{% static 'homepage/images/banner/b1.jpg' %}" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+            <img src="{% static 'homepage/images/banner/b2.jpg' %}" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+            <img src="{% static 'homepage/images/banner/b4.jpg' %}" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+            <img src="{% static 'homepage/images/banner/b5.jpg' %}" class="d-block w-100" alt="...">
+        </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </a>
+</div>
+
+{% endblock banner_slider %}
+
+{% block main-content %}
+{% for product in products %}
+<h2>{{product.name}}</h2>
+<h2>{{product.image}}</h2>
+<p>{{product.discription}}</p>
+{% endfor %}
+
+
+
+<div class="m-3">
+    <h2>Tech Deals of The Day</h2>
+    
+    <div class="owl-carousel" id="slider1">
+        <a href="{% url 'product-detail' %}" class="btn">
+            <div class="item"><img src="{% static 'homepage/images/product/1.jpg' %}" alt="" height="200px"><span
+                    class="fw-bold">boAt Airdopes 121V2</span><br><span class="fs-5">₹ 1299</span></div>
+        </a>
+        <div class="item"><img src="{% static 'homepage/images/product/2.jpg' %}" alt="" height="200px"><span
+                class="fw-bold">Sony Bravia 55" 4K TV</span><br><span class="fs-5">₹ 66,490</span></div>
+        <div class="item"><img src="{% static 'homepage/images/product/3.jpg' %}" alt="" height="200px"><span
+                class="fw-bold">Apple iPhone 12 Pro (256GB) - Graphite</span><br><span class="fs-5">₹ 119,900</span></div>
+        <div class="item"><img src="{% static 'homepage/images/product/4.jpg' %}" alt="" height="200px"><span
+                class="fw-bold">boAt Xtend Smart Watch</span><br><span class="fs-5">₹ 2,999</span></div>
+        <div class="item"><img src="{% static 'homepage/images/product/5.jpg' %}" alt="" height="200px"><span
+                class="fw-bold">Redgear MT02 Keyboard</span><br><span class="fs-5">₹ 899</span></div>
+        <div class="item"><img src="{% static 'homepage/images/product/6.jpg' %}" alt="" height="200px"><span
+                class="fw-bold">ASUS TUF Gaming F15 (2021)</span><br><span class="fs-5">₹ 57,990</span></div>
+        <!-- <div class="item"><img src="{% static 'homepage/images/product/7.jpg' %}" alt="" height="200px"><span
+                class="fw-bold">Product 7</span><br><span class="fs-5">₹ 500</span></div>
+        <div class="item"><img src="{% static 'homepage/images/product/8.jpg' %}" alt="" height="200px"><span
+                class="fw-bold">Product 8</span><br><span class="fs-5">₹ 300</span></div>
+        <div class="item"><img src="{% static 'homepage/images/product/9.jpg' %}" alt="" height="200px"><span
+                class="fw-bold">Product 9</span><br><span class="fs-5">₹ 600</span></div>
+        <div class="item"><img src="{% static 'homepage/images/product/10.jpg' %}" alt="" height="200px"><span
+                class="fw-bold">Product 10</span><br><span class="fs-5">₹ 900</span></div>
+        <div class="item"><img src="{% static 'homepage/images/product/11.jpg' %}" alt="" height="200px"><span
+                class="fw-bold">Product 11</span><br><span class="fs-5">₹ 100</span></div>
+        <div class="item"><img src="{% static 'homepage/images/product/12.jpg' %}" alt="" height="200px"><span
+                class="fw-bold">Product 12</span><br><span class="fs-5">₹ 200</span></div> -->
+    </div>
+</div>
+
+<div class="mx-3">
+    <h2>Trending Deals</h2>
+    
+    <div class="owl-carousel" id="slider2">
+        <div class="item"><img src="{% static 'homepage/images/product/7.jpg' %}" alt="" height="200px"><span
+                class="fw-bold">UV Protected Gold With Green Lens Aviator Sunglasses </span><br><span class="fs-5">₹ 399</span></div>
+        <div class="item"><img src="{% static 'homepage/images/product/8.jpg' %}" alt="" height="200px"><span
+                class="fw-bold">WildHorn Leather Men's Wallet</span><br><span class="fs-5">₹ 1,499</span></div>
+        <div class="item"><img src="{% static 'homepage/images/product/9.jpg' %}" alt="" height="200px"><span
+                class="fw-bold">SFANE Duffle Gym Bag</span><br><span class="fs-5">₹ 1,199</span></div>
+        <div class="item"><img src="{% static 'homepage/images/product/10.jpg' %}" alt="" height="200px"><span
+                class="fw-bold">Wesley Milestone Laptop Backpack</span><br><span class="fs-5">₹ 1,399</span></div>
+        <div class="item"><img src="{% static 'homepage/images/product/11.jpg' %}" alt="" height="200px"><span
+                class="fw-bold">Hush Puppies Men Corso Oxford Formal Shoes</span><br><span class="fs-5">₹ 2,699</span></div>
+        <div class="item"><img src="{% static 'homepage/images/product/12.jpg' %}" alt="" height="200px"><span
+                class="fw-bold">Horizon Forbidden West PS4</span><br><span class="fs-5">₹ 3,499</span></div>
+        <!-- <div class="item"><img src="{% static 'homepage/images/product/5.jpg' %}" alt="" height="200px"><span
+                class="fw-bold">Product 7</span><br><span class="fs-5">₹ 500</span></div>
+        <div class="item"><img src="{% static 'homepage/images/product/11.jpg' %}" alt="" height="200px"><span
+                class="fw-bold">Product 8</span><br><span class="fs-5">₹ 300</span></div>
+        <div class="item"><img src="{% static 'homepage/images/product/12.jpg' %}" alt="" height="200px"><span
+                class="fw-bold">Product 9</span><br><span class="fs-5">₹ 600</span></div>
+        <div class="item"><img src="{% static 'homepage/images/product/7.jpg' %}" alt="" height="200px"><span
+                class="fw-bold">Product 10</span><br><span class="fs-5">₹ 900</span></div>
+        <div class="item"><img src="{% static 'homepage/images/product/6.jpg' %}" alt="" height="200px"><span
+                class="fw-bold">Product 11</span><br><span class="fs-5">₹ 100</span></div>
+        <div class="item"><img src="{% static 'homepage/images/product/10.jpg' %}" alt="" height="200px"><span
+                class="fw-bold">Product 12</span><br><span class="fs-5">₹ 200</span></div> -->
+    </div>
+</div>
+
+{% endblock main-content %}

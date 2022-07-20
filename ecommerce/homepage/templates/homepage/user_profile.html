@@ -1,0 +1,75 @@
+{% extends 'homepage/navbar.html' %}
+{% load static %}
+{% block title %}User Profile{% endblock title %}
+{% block main-content %}
+
+
+
+<div class="container box-shadow rounded bg-white mt-5 mb-5 ">
+    <div class="row">
+        <div class="col-md-3 border-right border-left" style="margin-left: 55px;">
+            <div class="d-flex flex-column align-items-center text-center p-3  hover-rotate"><img
+                    class="rounded-circle mt-5" width="150px"
+                    src="https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg"><span
+                    class="font-weight-bold">Aaush</span>
+                <span class="text-black-50">aaushraj@mail.com</span><span> </span>
+            </div>
+            <div class="col-md-12">
+                <h4>Your Account :</h4>
+                <div class="">
+
+                    <div class="col-md-12 account-options">My Wishlist</div> <br>
+                    <div class="col-md-12 account-options">My Orders</div> <br>
+                    <div class="col-md-12 account-options">Order History</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-8 border-right">
+            <div class="p-3 py-5">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+
+                    <h4 class="text-right">User Details</h4>
+                    <div class=" text-center"><button class="btn btn-primary profile-button" type="button"><i
+                                class="fa fa-edit"></i>Edit Profile</button></div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-md-6"><label class="labels">Name</label><input type="text" class="form-control"
+                            placeholder="first name" value="Aaush" readonly></div>
+                    <div class="col-md-6"><label class="labels">Surname</label><input type="text" class="form-control"
+                            value="Raj" placeholder="surname" readonly></div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-md-6"><label class="labels">Gender</label><input type="text" class="form-control"
+                            placeholder="education" value="Male" readonly></div>
+                    <div class="col-md-6"><label class="labels">Mobile Number</label><input type="text"
+                            class="form-control" placeholder="enter phone number" value="8340578945" readonly></div>
+                    <div class="col-md-6"><label class="labels">Email ID</label><input type="text" class="form-control"
+                            placeholder="enter email id" value="aaushraj@gmail.com" readonly></div>
+                    <div class="col-md-6"><label class="labels">Address Line 1</label><input type="text"
+                            class="form-control" placeholder="enter address line 1" value="NH-55" readonly></div>
+                    <div class="col-md-6"><label class="labels">Address Line 2</label><input type="text"
+                            class="form-control" placeholder="enter address line 2" value="Gulabbagh" readonly></div>
+                    <div class="col-md-6"><label class="labels">Zipcode</label><input type="text" class="form-control"
+                            placeholder="enter your zipcode" value="854326" readonly></div>
+                    <div class="col-md-6"><label class="labels">City</label><input type="text" class="form-control"
+                            placeholder="enter your city name" value="Purnea" readonly></div>
+                    <div class="col-md-6"><label class="labels">State</label><input type="text" class="form-control"
+                            placeholder="enter your state name" value="Bihar" readonly></div>
+
+
+                </div>
+                <div class="row mt-3">
+                    <div class="col-md-6"><label class="labels">Country</label><input type="text" class="form-control"
+                            placeholder="country" value="India" readonly></div>
+                    <div class="col-md-6"><label class="labels">Preffered language</label><input type="text"
+                            class="form-control" value="English" placeholder="state" readonly></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+
+
+{% endblock main-content %}
